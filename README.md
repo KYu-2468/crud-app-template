@@ -94,7 +94,7 @@ npm install
 
 ![](assets/images/Vercel-Database1.png)
 
-![](assets/images/Vercel-Database2.png)
+![](assets/images/Vercel-Databse2.png)
 
 ### 8. Create an .env file to store database secrets and API keys
 

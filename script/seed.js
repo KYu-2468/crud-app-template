@@ -2,7 +2,7 @@ const { db, models } = require("../server/db");
 const { User } = models;
 
 async function seed() {
-  await User.create({ username: "Tester" });
+  await User.create({ username: "Test" });
 }
 
 seed().then(() => {
