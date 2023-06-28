@@ -2,6 +2,7 @@ const path = require("path");
 const express = require("express");
 const morgan = require("morgan");
 const app = express();
+
 module.exports = app;
 
 // static file-serving middleware
@@ -20,7 +21,7 @@ app.get("/", (req, res, next) => {
 
 app.use("*", (req, res, next) => {
   console.log("****");
-  res.send("You hit this");
+  res.send("You hit this route!");
 });
 
 // error handling endware

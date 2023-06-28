@@ -5,12 +5,15 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "concurrently \"nodemon server\" \"npm start --prefix ./client\"",
+    "start": "NODE_ENV=production concurrently \"nodemon server\" \"npm start --prefix ./client\"",
+    "start:dev": "NODE_ENV=development concurrently \"nodemon server\" \"npm start --prefix ./client\"",
     "build": "npm run build --prefix ./client",
     "client": "npm start --prefix ./client",
     "install:server": "npm i",
     "install:client": "npm install --prefix ./client",
-    "install:all": "npm run install:server && npm run install:client"
+    "install:all": "npm run install:server && npm run install:client",
+    "seed": "NODE_ENV=development node script/seed.js",
+    "seed:remote": "NODE_ENV=production node script/seed.js"
   },
   "keywords": [],
   "author": "",
