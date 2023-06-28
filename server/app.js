@@ -18,6 +18,11 @@ app.get("/", (req, res, next) => {
   res.sendFile(path.join(__dirname, "../client/build/index.html"));
 });
 
+app.use("*", (req, res, next) => {
+  console.log("****");
+  res.send("You hit this");
+});
+
 // error handling endware
 app.use((err, req, res, next) => {
   console.error(err);
