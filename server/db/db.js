@@ -12,8 +12,8 @@ if (process.env.LOGGING === "true") {
   delete config.logging;
 }
 
-if (process.env.NODE_ENV === "production" && process.env.DATABASE_URL) {
-  databaseURL = process.env.DATABASE_URL;
+if (process.env.NODE_ENV === "production" && process.env.POSTGRES_URL) {
+  databaseURL = process.env.POSTGRES_URL;
 
   //https://stackoverflow.com/questions/61254851/heroku-postgres-sequelize-no-pg-hba-conf-entry-for-host
   config.dialectOptions = {
